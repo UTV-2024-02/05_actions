@@ -25,7 +25,7 @@ describe('Testing unit calculation',
         it(
             'Zero division by anything',
             () => {
-                expect( calculate(0, 13) ).toBe( 7 );
+                expect( calculate(0, 13) ).toBe( 0 );
             }
         );
 
