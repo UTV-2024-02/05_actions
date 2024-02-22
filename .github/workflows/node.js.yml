@@ -26,5 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install jest
+    - run: apt install firefox 
+    - run: npm install selenium-webdriver jest
     - run: npm test
