@@ -27,5 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - uses: riccione/setup_firefox@v1
+    - uses: browser-actions/setup-chrome@v1.7.3
     - run: npm install selenium-webdriver jest
     - run: npm test
