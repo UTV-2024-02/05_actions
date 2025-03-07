@@ -1,6 +1,7 @@
 const { By, Builder } = require('selenium-webdriver');
 const Firefox = require('selenium-webdriver/firefox');
-const options = new Firefox.Options();
+//const options = new Firefox.Options();
+const options = new ChromeOptions();
 
 describe('Testing Selenium Form Page',
     () => {
@@ -9,8 +10,10 @@ describe('Testing Selenium Form Page',
         beforeAll(
             async () => {
                 driver = await new Builder()
-                .forBrowser('firefox')
-                .setFirefoxOptions( options.addArguments('--headless') )
+//                .forBrowser('firefox')
+//                .setFirefoxOptions( options.addArguments('--headless') )
+                .forBrowser('chrome')
+                .setChromeOptions( options.addArguments('--headless=new') )
                 .build();
             }, 50000
         );
