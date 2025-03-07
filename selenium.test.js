@@ -1,7 +1,8 @@
 const { By, Builder } = require('selenium-webdriver');
-const Firefox = require('selenium-webdriver/firefox');
+//const Firefox = require('selenium-webdriver/firefox');
 //const options = new Firefox.Options();
-const options = new ChromeOptions();
+const Chrome = require("selenium-webdriver/chrome");
+const options = new Chrome.Options();
 
 describe('Testing Selenium Form Page',
     () => {
