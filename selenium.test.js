@@ -24,7 +24,7 @@ describe('Testing Selenium Form Page',
             async () => {
                 await driver.get('https://www.selenium.dev/selenium/web/web-form.html');
                 expect( await driver.getTitle() ).toBe( "Web form" );
-            }
+            }, 20000
         )
 
         it(
@@ -42,7 +42,7 @@ describe('Testing Selenium Form Page',
         
                 let message = await driver.findElement( By.id('message') );
                 expect( await message.getText() ).toBe( "Received!" );
-            }
+            }, 20000
         )
     }
 )
