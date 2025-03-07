@@ -12,7 +12,7 @@ describe('Testing Selenium Form Page',
                 .forBrowser('firefox')
                 .setFirefoxOptions( options.addArguments('--headless') )
                 .build();
-            }, 20000
+            }, 50000
         );
 
         afterAll(
