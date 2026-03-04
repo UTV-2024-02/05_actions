@@ -45,7 +45,7 @@ describe('Testing Selenium Form Page',
                 await driver.manage().setTimeouts( {implicit: 500} );
         
                 let message = await driver.findElement( By.id('message') );
-                expect( await message.getText() ).toBe( "Received!" );
+                expect( await message.getText() ).toBe( "Form submitted" );
             }, 20000
         )
     }
